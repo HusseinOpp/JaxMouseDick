@@ -7,15 +7,10 @@ public class MoveMent : MonoBehaviour
 
     void Update()
     {
-        
-
-    }
-
-    void FixedUpdate()
-    {
         float mvoex = Input.GetAxis("Horizontal");
         float movey = Input.GetAxis("Vertical");
-        Vector3 movement = new Vector3(mvoex, 0, movey) * speed;
+        Vector3 movement = new Vector3(mvoex, 0, movey);
         transform.Translate(movement, Space.World);
     }
+    
 }
