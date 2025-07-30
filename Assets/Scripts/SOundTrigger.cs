@@ -9,6 +9,7 @@ public class SOundTrigger : MonoBehaviour
         {
             AudioSource.PlayClipAtPoint(SOund, transform.position);
             Debug.Log("Enter");
+            Destroy(gameObject);
         }
     }
 }
