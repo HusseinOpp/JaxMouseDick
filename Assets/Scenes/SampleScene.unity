@@ -257,7 +257,7 @@ Transform:
   m_GameObject: {fileID: 345484991}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: 0.76579607, z: -0, w: 0.6430836}
-  m_LocalPosition: {x: -0.51927495, y: -1.2638519, z: -3.6794748}
+  m_LocalPosition: {x: -5.05, y: -1.2638519, z: -2.88}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -617,8 +617,8 @@ Transform:
   m_GameObject: {fileID: 843734434}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.37, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -633,28 +633,14 @@ GameObject:
   m_Component:
   - component: {fileID: 1156639769}
   - component: {fileID: 1156639768}
-  - component: {fileID: 1156639766}
+  - component: {fileID: 1156639770}
   m_Layer: 0
   m_Name: DeadAudio
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1156639766
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1156639765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40ce0da6bf6c0e3408d4d05ae553b2f1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  SOund: {fileID: 8300000, guid: ecbc25393af01c5408fa7a7dcaa828d4, type: 3}
-  Tag: Dead
 --- !u!65 &1156639768
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -684,13 +670,31 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1156639765}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -2.15, z: 5.22}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: -2.7600002, z: 5.22}
+  m_LocalScale: {x: 2, y: 1, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1156639770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1156639765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 40ce0da6bf6c0e3408d4d05ae553b2f1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SOund: {fileID: 8300000, guid: ecbc25393af01c5408fa7a7dcaa828d4, type: 3}
+  PlayerPost: {fileID: 1704146336}
+  Isenter: 0
+  IsPlaying: 0
+  yes: 0
+  Tag: ground
 --- !u!1 &1328876959
 GameObject:
   m_ObjectHideFlags: 0
@@ -705,7 +709,7 @@ GameObject:
   - component: {fileID: 1328876960}
   m_Layer: 0
   m_Name: AudioTrigger
-  m_TagString: Untagged
+  m_TagString: Dead
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -723,16 +727,16 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 713dba2420b206e449825e638621e137, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
+  m_Volume: 0.745
+  m_Pitch: 0.03
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 101
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
+  MinDistance: 2
+  MaxDistance: 5
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -820,6 +824,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SOund: {fileID: 8300000, guid: 713dba2420b206e449825e638621e137, type: 3}
+  PlayerPost: {fileID: 0}
+  Isenter: 0
+  IsPlaying: 0
+  yes: 0
   Tag: Player
 --- !u!65 &1328876962
 BoxCollider:
@@ -851,7 +859,7 @@ Transform:
   m_GameObject: {fileID: 1328876959}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.94, y: 0.7, z: 0}
+  m_LocalPosition: {x: 1.11, y: 0.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 8.8808}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1067,7 +1075,7 @@ GameObject:
   - component: {fileID: 1704146332}
   m_Layer: 0
   m_Name: Cube (1)
-  m_TagString: Dead
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1182,7 +1190,7 @@ Transform:
   m_GameObject: {fileID: 1704146331}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.31, y: 1.35, z: 3}
+  m_LocalPosition: {x: 4.05, y: 30, z: 0.44}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1197,5 +1205,5 @@ SceneRoots:
   - {fileID: 843734438}
   - {fileID: 1704146336}
   - {fileID: 1328876963}
-  - {fileID: 1156639769}
   - {fileID: 159978825}
+  - {fileID: 1156639769}
